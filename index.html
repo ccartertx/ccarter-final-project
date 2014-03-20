@@ -5,42 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ATX Homebrew Swap</title>
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/foundation-icons/foundation-icons.css" />
+    <!-- My Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- My Web Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
     <script src="js/vendor/modernizr.js"></script>
   </head>
-  <body>
+  <body class="main">
+    
 <!--Header area -->
-
+  <div id="header">
+    <div id="header_opacity">
     <div class="row">
-      <div class="small-12 columns">
-        <h1>ATX Homebrew Swap</h1>
-        <img src="http://placehold.it/350x150" />
-      </div>
+      <a href="index.html">
+        <div class="large-12 columns" id="header_title">
+          <h1 class="title">ATX homebrew swap</h1>
+        </div>
+      </a>
     </div>
-
-
+  </div>
+</div>
+<div class="wrapper">
  <!-- Intro and overview info -->   
     <div class="row">
-      <div class="large-12 columns">
-      	<div class="panel">
-	        
-	        <p>......Brief welcome here.....</p>
-	        
+      <div id= "site_overview" class="large-12 columns">	        
 	        <div class="row">
 	        	<div class="large-4 medium-4 columns">
               <h3>swap</h3>
+              <h2><i class="fi-torsos-all"></i></h2>
 	    		     <p>Share with your fellow homebrewers. Swap your beers.</p>
 	    	    </div>
             <div class="large-4 medium-4 columns">
               <h3>review</h3>
+              <h2><i class="fi-clipboard-pencil"></i></h2>
                <p>Provide feedback on the beers you tasted. Keep it constructive!</p>
             </div>
             <div class="large-4 medium-4 columns">
               <h3>repeat</h3>
-               <p>Use feedback from others to improve your next brew and keep swapping.</p>
+              <h2><i class="fi-shuffle"></i></h2>
+               <p>Get feedback to improve your next brew and keep swapping.</p>
             </div>
 	        	    
 					</div>
-      	</div>
       </div>
     </div>
 
@@ -73,7 +82,7 @@
       <div class="small-6 columns">
         <div class="callout panel">
         <p>Ready to swap?</p>
-        <a href="beer_swap.html" class="small radius button">Submit a Beer</a><br/>
+        <a href="#" data-reveal-id="beerFormModal" data-reveal class="small radius button">Submit a Beer</a><br/>
         </div>
       </div>
       <div class="small-6 columns">
@@ -83,6 +92,164 @@
         </div>
       </div>
     </div>
+        <!-- Begin Beer Form Modal -->
+          <div id="beerFormModal" class="reveal-modal" data-reveal>
+        <!-- Enter a Beer to Swap -->   
+          <div class="row">
+            <div class="small-12 columns">
+              <h3>What Beer Will You Swap?</h3>
+            </div>
+          </div>
+           <a class="close-reveal-modal">&#215;</a>
+          <div class="row">
+            <div>
+              <!-- Form Starts Here -->
+              <form data-abide action="http://getsimpleform.com/messages?form_api_token=d2481b9dab8069c0b46ba920f837be53" method="post">
+                <div class="row">
+                  <input type='hidden' name='redirect_to' value='http://google.com' /> <!-- Change this URL once hosted -->
+                </div>
+
+                <div class="row">
+                  <div class="large-8 columns">
+                    <div class="row">
+                      <div class="small-3 columns">
+                        <label class="fieldTitle right inline">Name</label>
+                      </div>
+                      <div class="small-9 columns">
+                        <input type="text" name='name' placeholder="Your Name" required/>
+                        <small class="error">Please enter your name.</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="small-8 columns">
+                      <div class="row">
+                        <div class="small-3 columns">
+                          <label class="fieldTitle right inline">E-mail</label>
+                        </div>
+                        <div class="small-9 columns">
+                          <input type="email" name='email'  pattern="email" required />
+                          <small class="error">Please give a valid email.</small>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="small-8 columns">
+                    <div class="row">
+                      <div class="small-3 columns">
+                        <label class="fieldTitle right inline">Beer Style</label>
+                      </div>
+                      <div class="small-9 columns">
+                        <select name="beer_style" required>
+                          <option value="enteroptionname">Beer Style Data? </option>  <!-- Can I find some xml or something for this long list? -->
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="small-8 columns">
+                    <div class="row">
+                      <div class="small-2 columns">
+                        <label class="fieldTitle right inline">ABV (%)</label>
+                      </div>
+                      <div class="small-2 columns">
+                        <input type="text" name="abv" placeholder="5.3">
+                      </div>
+                      <div class="small-2 columns">
+                        <label class="fieldTitle right inline">IBU</label>
+                      </div>
+                      <div class="small-2 columns">
+                        <input type="text" name="ibu">
+                      </div>
+                      <div class="small-2 columns">
+                        <label class="fieldTitle right inline">SRM</label>
+                      </div>
+                      <div class="small-2 columns">
+                        <input type="text" name="srm">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="small-8 columns">
+                    <div class="row">
+                      <div class="small-2 columns">
+                        <label class="fieldTitle right inline">Size</label>
+                      </div>
+                      <div class="small-4 columns">
+                        <select name="bottle_size" required>
+                          <option value="12oz">12 oz.</option> 
+                          <option value="22oz">22 oz.</option>
+                          <option value="750mL">750 mL</option> 
+                          <option value="other">other</option>
+                        </select>
+                      </div>
+                      <div class="small-2 columns">
+                        <label class="fieldTitle right inline">Quantity</label>
+                      </div>
+                      <div class="small-4 columns">
+                        <input type="number" name="quantity" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="small-8 columns">
+                      <div class="row">
+                        <div class="small-3 columns">
+                          <label class="fieldTitle right inline">Brew Date</label>
+                        </div>
+                        <div class="small-9 columns">
+                          <input name="brew_date" type="datetime"/>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="small-8 columns">
+                    <div class="row">
+                      <div class="small-3 columns">
+                        <label class="fieldTitle">Brewing Method</label>
+                      </div>
+                      <div class="small-9 columns">
+                        <select name="brewing_method" required>
+                          <option value="all_grain">All Grain</option> 
+                          <option value="extract">Extract</option>
+                          <option value="mini_mash">Mini Mash</option> 
+                          <option value="brew_in_a_bag">Brew in a Bag</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+                <div class="row">
+                  <div class="small-8 columns">
+                    <div class="row">
+                      <div class="small-3 columns">
+                        <label class="fieldTitle right inline">Recipe</label>
+                      </div>
+                      <div class="small-9 columns">
+                        <textarea name="recipe" placeholder="Beersmith link, kit description, or directions"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="small-8 columns">
+                    <button type="submit">Submit</button>
+                  </div>
+                </div>
+              </form>
+       
+      </div> <!-- end of Beer Entry Form Modal -->
+    </div>
+  </div>
 
     <hr />
 
@@ -95,7 +262,7 @@
       </div>
     </div>
 
-    <hr />
+    </div><!-- End wrapper -->
 
     <!--Footer area -->
 
@@ -112,5 +279,13 @@
     <script>
       $(document).foundation();
     </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <!-- Fittext  -->
+        <script src="js/jquery.fittext.js"></script>
+        <script>
+            //call fitText() function for the element you want to be fluid
+            $("#header_title").fitText();
+            //Font-size = 1/10th of the element's width
+        </script>
   </body>
 </html>
