@@ -1,0 +1,205 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATX Homebrew Swap</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+<!--Header area -->
+
+    <div class="row">
+      <div class="small-12 columns">
+        <h1>ATX Homebrew Swap</h1>
+        <img src="http://placehold.it/350x150" />
+      </div>
+    </div>
+
+
+ <!-- Enter a Beer to Swap -->   
+    <div class="row">
+      <div class="small-12 columns">
+        <h3>Enter your Beer</h3>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="small-8 columns">
+        <!-- Form Starts Here -->
+        <form data-abide action="http://getsimpleform.com/messages?form_api_token=d2481b9dab8069c0b46ba920f837be53" method="post">
+          <div class="row">
+            <input type='hidden' name='redirect_to' value='http://google.com' /> <!-- Change this URL once hosted -->
+          </div>
+
+<!-- <form>
+  <div class="row">
+    <div class="small-8">
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Label</label>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" id="right-label" placeholder="Inline Text Input">
+        </div>
+      </div>
+    </div>
+  </div>
+</form> -->
+
+          <div class="row">
+            <div class="small-8 columns">
+              <div class="row">
+                <div class="small-3 columns">
+                  <label class="fieldTitle right inline">Name</label>
+                </div>
+                <div class="small-9 columns">
+                  <input type="text" name='name' placeholder="Your Name" required/>
+                  <small class="error">Please enter your name.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="small-8 columns">
+                <div class="row">
+                  <div class="small-3 columns">
+                    <label class="fieldTitle right inline">E-mail</label>
+                  </div>
+                  <div class="small-9 columns">
+                    <input type="email" name='email'  pattern="email" required />
+                    <small class="error">Please give a valid email.</small>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="small-8 columns">
+              <div class="row">
+                <div class="small-3 columns">
+                  <label class="fieldTitle right inline">Beer Style</label>
+                </div>
+                <div class="small-9 columns">
+                  <select name="beer_style" required>
+                    <option value="enteroptionname">Beer Style Data? </option>  <!-- Can I find some xml or something for this long list? -->
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-8 columns">
+              <div class="row">
+                <div class="small-2 columns">
+                  <label class="fieldTitle right inline">ABV (%)</label>
+                </div>
+                <div class="small-2 columns">
+                  <input type="text" name="abv" placeholder="5.3">
+                </div>
+                <div class="small-2 columns">
+                  <label class="fieldTitle right inline">IBU</label>
+                </div>
+                <div class="small-2 columns">
+                  <input type="text" name="ibu">
+                </div>
+                <div class="small-2 columns">
+                  <label class="fieldTitle right inline">SRM</label>
+                </div>
+                <div class="small-2 columns">
+                  <input type="text" name="srm">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-8 columns">
+              <div class="row">
+                <div class="small-2 columns">
+                  <label class="fieldTitle right inline">Size</label>
+                </div>
+                <div class="small-4 columns">
+                  <select name="bottle_size" required>
+                    <option value="12oz">12 oz.</option> 
+                    <option value="22oz">22 oz.</option>
+                    <option value="750mL">750 mL</option> 
+                    <option value="other">other</option>
+                  </select>
+                </div>
+                <div class="small-2 columns">
+                  <label class="fieldTitle right inline">Quantity</label>
+                </div>
+                <div class="small-4 columns">
+                  <input type="number" name="quantity" required>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="small-8 columns">
+                <div class="row">
+                  <div class="small-3 columns">
+                    <label class="fieldTitle right inline">Brew Date</label>
+                  </div>
+                  <div class="small-9 columns">
+                    <input name="brew_date" type="datetime"/>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="small-8 columns">
+              <div class="row">
+                <div class="small-3 columns">
+                  <label class="fieldTitle">Brewing Method</label>
+                </div>
+                <div class="small-9 columns">
+                  <select name="brewing_method" required>
+                    <option value="all_grain">All Grain</option> 
+                    <option value="extract">Extract</option>
+                    <option value="mini_mash">Mini Mash</option> 
+                    <option value="brew_in_a_bag">Brew in a Bag</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="row">
+            <div class="small-8 columns">
+              <div class="row">
+                <div class="small-3 columns">
+                  <label class="fieldTitle right inline">Recipe</label>
+                </div>
+                <div class="small-9 columns">
+                  <textarea name="recipe" placeholder="Beersmith link, kit description, or directions"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-8 columns">
+              <button type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+
+    <!--Footer area -->
+
+    <div class="row">
+      <div class="small-12 columns">
+        <p><em>Footer and menu</em></p>
+      </div>
+    </div>
+
+    
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
