@@ -66,12 +66,22 @@ h3 {
  	color: #ffd700;
  }
 
+ /* Google Map*/
+ .map {
+ 	margin: 2%;
+ }
+
  /* Photo Styles */
  .photos img {
 	border-radius: 3%;
 	width: 100%;
 	height: 100%;
 }
+
+/* Form Area */
+#form_area h4 {
+ 	color: #ffd700;
+ }
 
  /* Form Styles */
 

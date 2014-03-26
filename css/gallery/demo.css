@@ -46,6 +46,8 @@ a:hover {
 	margin: 0 0 0.6em 0;
 	float: left;
 	font-weight: 400;
+	text-transform: lowercase;
+	color: #6599FF;
 }
 
 .container > header > span {
