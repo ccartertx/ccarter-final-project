@@ -19,15 +19,26 @@
 <!--Header area -->
   <div id="header">
     <div id="header_opacity">
-    <div class="row">
-      <a href="index.html">
+      <div class="row">
+        <a href="index.html">
         <div class="large-12 columns" id="header_title">
           <h1 class="title">ATX homebrew swap</h1>
         </div>
-      </a>
+        </a>
+      </div>
     </div>
   </div>
-</div>
+
+<div id="navmenu">
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="events.html">events</a></li>
+      <li><a href="beer_gallery.html">beer gallery</a></li>
+      <li><a href="tasting.html">tasting tips</a></li>
+
+    </ul>
+  </div>
+  
 <div class="wrapper">
  <!-- Intro and overview info -->   
     <div class="row">
@@ -68,10 +79,18 @@
     <div class="row">
       <div class="small-12 columns">
         <h3>Featured Beers</h3>
-        <img src="http://placehold.it/120x120" />
-        <img src="http://placehold.it/120x120" />
-        <img src="http://placehold.it/120x120" />
-        <div><a href="beers.html">Full Beer List</a></div>
+          <div class="row">
+            <div class="small-4 columns photos">
+              <p><img src="img/large/beer_01_smash.jpg" alt="Photo of SMaSH beer"/></p>
+            </div>
+            <div class="small-4 columns photos">
+              <p><img src="img/large/beer_05_stout.jpg" alt="Photo of stout beer"/></p>
+            </div>
+            <div class="small-4 columns photos">
+              <p><img src="img/large/beer_06_amber.jpg" alt="Photo of amber beer"/></p>
+            </div>        
+          </div>
+        <div><a href="beer_gallery.html">Beer Gallery</a></div>
       </div>
     </div>
 
@@ -94,16 +113,16 @@
     </div>
         <!-- Begin Beer Form Modal -->
           <div id="beerFormModal" class="reveal-modal" data-reveal>
-        <!-- Enter a Beer to Swap -->   
+        <!-- Form to Enter a Beer to Swap -->   
           <div class="row">
-            <div class="small-12 columns">
+            <div class="small-12 columns swap-form">
               <h3>What Beer Will You Swap?</h3>
             </div>
           </div>
            <a class="close-reveal-modal">&#215;</a>
           <div class="row">
             <div>
-              <!-- Form Starts Here -->
+              <!-- Form Fields Start Here -->
               <form data-abide action="http://getsimpleform.com/messages?form_api_token=d2481b9dab8069c0b46ba920f837be53" method="post">
                 <div class="row">
                   <input type='hidden' name='redirect_to' value='http://google.com' /> <!-- Change this URL once hosted -->
@@ -129,7 +148,7 @@
                           <label class="fieldTitle right inline">E-mail</label>
                         </div>
                         <div class="small-9 columns">
-                          <input type="email" name='email'  pattern="email" required />
+                          <input type="email" name='email'  pattern="email" placeholder="your@email.com" required />
                           <small class="error">Please give a valid email.</small>
                         </div>
                       </div>
@@ -142,8 +161,33 @@
                         <label class="fieldTitle right inline">Beer Style</label>
                       </div>
                       <div class="small-9 columns">
-                        <select name="beer_style" required>
-                          <option value="enteroptionname">Beer Style Data? </option>  <!-- Can I find some xml or something for this long list? -->
+                        <select name="beer_style" placeholder="BJCP Style" required>
+                          <option value="light_lager">1. LIGHT LAGER</option> 
+                          <option value="pils">2. PILSNER</option>
+                          <option value="euro_amber_lager">3. EUROPEAN AMBER LAGER</option>
+                          <option value="dark_lager">4. DARK LAGER</option>
+                          <option value="bock">5. BOCK</option>
+                          <option value="light_hybrid">6. LIGHT HYBRID BEER</option>
+                          <option value="amber_hybrid">7. AMBER HYBRID BEER</option>
+                          <option value="english_pale">8. ENGLISH PALE ALE</option>
+                          <option value="scottish_irish_ale">9. SCOTTISH AND IRISH ALE</option>
+                          <option value="american_ale">10. AMERICAN ALE</option>
+                          <option value="english_brown_ale">11. ENGLISH BROWN ALE</option>
+                          <option value="porter">12. PORTER</option>
+                          <option value="stout">13. STOUT</option>
+                          <option value="ipa">14. INDIA PALE ALE (IPA)</option>
+                          <option value="german_wheat_rye">15. GERMAN WHEAT AND RYE BEER</option>
+                          <option value="belgian_french_ale">16. BELGIAN AND FRENCH ALE</option>
+                          <option value="sour">17. SOUR ALE</option>
+                          <option value="belgian_strong">18. BELGIAN STRONG ALE</option>
+                          <option value="strong">19. STRONG ALE</option>
+                          <option value="fruit">20. FRUIT BEER</option>
+                          <option value="spice_herb_veg">21. SPICE / HERB / VEGETABLE BEER</option>
+                          <option value="smoke_or_wood">22. SMOKE-FLAVORED AND WOOD-AGED BEER</option>
+                          <option value="specialty">23. SPECIALTY BEER</option>
+                          <option value="mead">MEAD</option>
+                          <option value="cider">CIDER</option>
+                          <option value="other">Other</option><!-- Can I find some xml or something for this long list? -->
                         </select>
                       </div>
                     </div>
@@ -153,22 +197,22 @@
                   <div class="small-8 columns">
                     <div class="row">
                       <div class="small-2 columns">
-                        <label class="fieldTitle right inline">ABV (%)</label>
+                        <label class="fieldTitle right inline">ABV</label>
                       </div>
                       <div class="small-2 columns">
-                        <input type="text" name="abv" placeholder="5.3">
+                        <input type="text" name="abv" placeholder="%">
                       </div>
                       <div class="small-2 columns">
                         <label class="fieldTitle right inline">IBU</label>
                       </div>
                       <div class="small-2 columns">
-                        <input type="text" name="ibu">
+                        <input type="text" name="ibu" placeholder="#">
                       </div>
                       <div class="small-2 columns">
                         <label class="fieldTitle right inline">SRM</label>
                       </div>
                       <div class="small-2 columns">
-                        <input type="text" name="srm">
+                        <input type="text" name="srm" placeholder="#">
                       </div>
                     </div>
                   </div>
@@ -188,7 +232,7 @@
                         </select>
                       </div>
                       <div class="small-2 columns">
-                        <label class="fieldTitle right inline">Quantity</label>
+                        <label class="fieldTitle right inline">Qty</label>
                       </div>
                       <div class="small-4 columns">
                         <input type="number" name="quantity" required>
@@ -259,6 +303,7 @@
         <h3>Beer Tasting 101</h3>
         <p>Brush up on beer tasting terminology and techniques to help you appreciate the beers you try and provide better feedback in your reviews!</p>
         <div><a href="tasting.html">Learn More</a></div>
+        <br/>
       </div>
     </div>
 
@@ -268,7 +313,7 @@
 
     <div class="row">
       <div class="small-12 columns">
-        <p><em>Footer and menu</em></p>
+        <p>&nbsp;</p>
       </div>
     </div>
 
